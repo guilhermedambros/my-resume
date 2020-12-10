@@ -76,6 +76,12 @@ class SkillSeeder extends Seeder
             ['description' => 'E-Social'],
             ['description' => 'IRRF'],
         ];
+
+        $dev_skills_2 = [
+            ['description' => 'Flutter'],
+            ['description' => 'Markdown'],
+        ];
+
         foreach ($dev_skills as $skill) {
             Skill::create($skill);
         }
@@ -83,6 +89,9 @@ class SkillSeeder extends Seeder
             Skill::create($skill);
         }
         foreach ($dep_pessoal_skills as $skill) {
+            Skill::create($skill);
+        }
+        foreach ($dev_skills_2 as $skill) {
             Skill::create($skill);
         }
     }
