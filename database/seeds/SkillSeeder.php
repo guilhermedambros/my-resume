@@ -52,7 +52,7 @@ class SkillSeeder extends Seeder
             ['description' => 'Lucro Real'],
             ['description' => 'Lucro presumido'],
             ['description' => 'Simples Nacional'],
-            ['description' => 'Demonstrações coontábeis'],
+            ['description' => 'Demonstrações contábeis'],
             ['description' => 'IRPF'],
             ['description' => 'Declarações Anuais'],
             ['description' => 'ECF'],

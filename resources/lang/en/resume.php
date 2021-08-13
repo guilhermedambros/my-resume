@@ -38,5 +38,5 @@ return [
         'singular' => 'Language.',
     ],
     'no_resume' => 'No resume found!',
-    'resumes' => 'List os resumes'
+    'resumes' => 'List of resumes'
 ];

@@ -44,12 +44,16 @@ class Resume extends Model
     }
     public function careers()
     {
-        return $this->hasMany(Career::class)->orderBy('begin', 'desc');
+        $order_by = (env('APP_ENV')=='local') ? 'substr(begin, 7, 4)||substr(begin, 4, 2) desc' 
+            : 'CONCAT(substr(begin, 7, 4),substr(begin, 4, 2)) desc';
+        return $this->hasMany(Career::class)->orderByRaw($order_by);
     }
 
     public function educations()
     {
-        return $this->hasMany(Education::class)->orderBy('begin', 'desc');
+        $order_by = (env('APP_ENV')=='local') ? 'substr(begin, 7, 4)||substr(begin, 4, 2) desc' 
+        : 'CONCAT(substr(begin, 7, 4),substr(begin, 4, 2)) desc';
+        return $this->hasMany(Education::class)->orderByRaw($order_by);
     }
 
     public function social_medias()
